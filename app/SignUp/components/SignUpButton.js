@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function SingnUpButton() {
   function handleSubmit(e) {
     e.preventDefault();
@@ -38,9 +40,9 @@ export default function SingnUpButton() {
 
       <p className="text-sm text-gray-500 space-x-2">
         <span>Already have an account?</span>
-        <a href="/Login" className="text-blue-500 underline">
+        <Link href="/Login" className="text-blue-500 underline">
           Login
-        </a>
+        </Link>
       </p>
     </>
   );

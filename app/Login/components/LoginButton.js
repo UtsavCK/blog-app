@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function LoginButton() {
   function handleSubmit(e) {
     e.preventDefault();
@@ -30,10 +32,10 @@ export default function LoginButton() {
       </button>
 
       <p className="text-sm text-gray-500 space-x-2">
-        <span>Don't have an account?</span>
-        <a href="/SignUp" className="text-blue-500 underline">
+        <span>Don&apos;t have an account?</span>
+        <Link href="/SignUp" className="text-blue-500 underline">
           Sign Up
-        </a>
+        </Link>
       </p>
     </>
   );

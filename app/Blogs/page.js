@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import LogoutButton from "./components/LogoutButton";
 import BlogCard from "./components/BlogCard";
 import CheckAccess from "./components/CheckAccess";
+import Link from "next/link";
 
 export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
@@ -73,21 +74,21 @@ export default function Blogs() {
       <CheckAccess />
       <div className="flex flex-col w-full h-screen p-4 space-y-4">
         <div className="flex flex-row justify-between text-xl font-bold text-left">
-          <a href="/">BlogApp</a>
+          <Link href="/">BlogApp</Link>
           <LogoutButton />
         </div>
 
         <div className="flex flex-col items-center justify-center w-full p-4">
           <h1 className="text-4xl font-bold">Blogs</h1>
           <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
-            <a href="/Blogs/AddBlog">
+            <Link href="/Blogs/AddBlog">
               Create Blog
               <img
                 src="/create.svg"
                 alt="Create"
                 className="w-4 h-4 inline-block ml-2"
               />
-            </a>
+            </Link>
           </button>
 
           <div className="grid grid-cols-3 justify-evenly w-full h-full m-4 p-4">
