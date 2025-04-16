@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 export default function LoginButton() {
   function handleSubmit(e) {
     e.preventDefault();
@@ -11,9 +9,9 @@ export default function LoginButton() {
       localStorage.getItem("username") === Username.value &&
       localStorage.getItem("password") === Password.value
     ) {
-      localStorage.setItem("isLoggedIn", true);
-      console.log(localStorage.getItem("isLoggedIn"));
+      sessionStorage.setItem("isLoggedIn", true);
       alert("Login Successful!");
+      window.location.href = "/Blogs";
     } else {
       alert("Invalid Credentials!");
       Password.value = "";
