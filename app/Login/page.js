@@ -11,9 +11,13 @@ export default function Login() {
         <div className="text-xl font-bold">
           <Link href="/">BlogApp</Link>
         </div>
-        <div className="flex flex-col items-center justify-center w-full h-full p-4">
-          <StaticInfo />
-          <LoginButton />
+        <div className="flex flex-col items-center justify-center flex-1 w-full">
+          <div className="w-full max-w-md bg-gray-900 bg-opacity-95 rounded-2xl shadow-2xl p-8 border border-gray-800">
+            <div className="mb-6 text-center">
+              <StaticInfo />
+              <LoginButton />
+            </div>
+          </div>
         </div>
       </div>
     </>

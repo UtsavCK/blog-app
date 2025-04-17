@@ -12,7 +12,6 @@ export default function LoginButton() {
       localStorage.getItem("password") === Password.value
     ) {
       sessionStorage.setItem("isLoggedIn", true);
-      alert("Login Successful!");
       window.location.href = "/Blogs";
     } else {
       alert("Invalid Credentials!");
